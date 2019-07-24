@@ -1,5 +1,5 @@
 var app = new PIXI.Application(window.innerWidth, window.innerHeight, { antialias: true, backgroundColor: 0xe3e3e3 });
-document.body.appendChild(app.view);
+document.getElementsByClassName("container").appendChild(app.view);
 
 var sprites = new PIXI.particles.ParticleContainer(10000, {
     scale: true,
@@ -106,8 +106,8 @@ var style = new PIXI.TextStyle({
     dropShadowDistance: 20,
 });
 
-var richText = new PIXI.Text('Happy Birthday', style);
-richText.x = window.innerWidth/2 - richText.getBounds().width/2;
-richText.y = window.innerHeight/2 - richText.getBounds().height/2;
+// var richText = new PIXI.Text('Text', style);
+// richText.x = window.innerWidth/2 - richText.getBounds().width/2;
+// richText.y = window.innerHeight/2 - richText.getBounds().height/2;
 
-app.stage.addChild(richText);
+// app.stage.addChild(richText);
