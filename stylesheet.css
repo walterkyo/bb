@@ -1283,13 +1283,13 @@ audio {
 }
 
 .btn-primary {
-        border-color: #466baf;
+        border-color: #000000;
         padding: 10px;
         text-transform: uppercase;
         font-family: 'Signika', sans-serif;
         font-weight: 700;
         color: #fff;
-        background-color: #466baf;
+        background-color: #000000;
 }
     .btn-primary:hover,
     .btn-primary:focus,
@@ -1298,7 +1298,7 @@ audio {
     .open .dropdown-toggle.btn-primary {
         border-color: #fff;
         color: #fff;
-        background-color: #466baf;
+        background-color: #------;
     }
 
 
