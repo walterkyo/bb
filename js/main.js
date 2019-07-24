@@ -1,5 +1,5 @@
 var app = new PIXI.Application(window.innerWidth, window.innerHeight, { antialias: true, backgroundColor: 0xe3e3e3 });
-document.getElementsByClassName("container").appendChild(app.view);
+// document.body.appendChild(app.view);
 
 var sprites = new PIXI.particles.ParticleContainer(10000, {
     scale: true,
