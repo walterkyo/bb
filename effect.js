@@ -1,6 +1,8 @@
 $(window).load(function(){
 	$('.loading').fadeOut('fast');
 	$('.container').fadeIn('fast');
+
+	showPapers();
 });
 $('document').ready(function(){
 		var vw;
