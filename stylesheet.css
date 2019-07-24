@@ -10,6 +10,7 @@ body {
 }
 .container {
 	display: none;
+	z-index: 10;
 }
 .peach {
 	background-color: #FFDAB9;
