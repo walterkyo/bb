@@ -138,7 +138,7 @@ $('document').ready(function(){
 		$('#bulb_orange').addClass('bulb-glow-orange');
 		$('body').addClass('peach');
 		showDecor();
-		$(this).fadeOut('slow').delay(0).promise().done(function(){
+		$(this).fadeOut('slow').delay(500).promise().done(function(){
 			$('#play').fadeIn('slow');
 		});
 	});
@@ -156,18 +156,8 @@ $('document').ready(function(){
 		var randleft = 1000*Math.random();
 		var randtop = 270;
 
-		$('#jam').animate({left:randleft,bottom:randtop},1000,function(){
+		$('#jam').animate({left:randleft,bottom:randtop},900,function(){
 			loopJam();
-		});
-	}
-
-	function loopJamDance() {
-		$('#jam').css("background-image", "url(dance.png)");
-		$('#jam').fadeIn('slow').delay(500).promise().done(function(){
-			$('#jam').css("background-image", "url(dance2.png)");
-    		$('#jam').fadeIn('slow').delay(500).promise().done(function(){
-    			loopJamDance();
-    		});
 		});
 	}
 
@@ -186,16 +176,15 @@ $('document').ready(function(){
 		$('#jam').css("background-image", "url(dance2.png)");
 
 		//play jam photos
-		$(this).fadeOut('slow').delay(0).promise().done(function(){
+		$(this).fadeOut('slow').delay(500).promise().done(function(){
 			$('#bannar_coming').fadeIn('slow');
-			// loopJamDance();
 			loopJam();
 		});
 	});
 
 	$('#bannar_coming').click(function(){
 		$('.bannar').addClass('bannar-come');
-		$(this).fadeOut('slow').delay(0).promise().done(function(){
+		$(this).fadeOut('slow').delay(500).promise().done(function(){
 			$('#balloons_flying').fadeIn('slow');
 		});
 	});
@@ -268,7 +257,7 @@ $('document').ready(function(){
 		loopSix();
 		loopSeven();
 		
-		$(this).fadeOut('slow').delay(0).promise().done(function(){
+		$(this).fadeOut('slow').delay(500).promise().done(function(){
 			$('#cake_fadein').fadeIn('slow');
 		});
 	});	

@@ -1086,7 +1086,7 @@ audio {
 	background-repeat: no-repeat no-repeat;
 	/*background-attachment: fixed;*/
 	background-position: center; 
-	background-size: 180px 180px;
+	background-size: auto 180px;
 }
 .balloons h2 {
 	text-transform: uppercase;
@@ -1119,6 +1119,9 @@ audio {
 }
 #jam{
 	background-image: url('dance.png');
+	background-repeat: no-repeat no-repeat;
+	background-position: center; 
+	background-size: 180px 180px;
 }
 .balloons-rotate-behaviour-one {
 	-webkit-animation: balloons_rotate_one linear 10s infinite;
