@@ -970,12 +970,12 @@ audio {
 }
 
 .bannar {
-	max-width: 30%;
-	-webkit-transform:translate(0px,-3500px);
-	-moz-transform:translate(0px,-3500px);
-	-o-transform:translate(0px,-3500px);
-	-ms-transform:translate(0px,-3500px);
-	transform:translate(0px,-3500px);
+	max-width: 40%;
+	-webkit-transform:translate(0px,-4500px);
+	-moz-transform:translate(0px,-4500px);
+	-o-transform:translate(0px,-4500px);
+	-ms-transform:translate(0px,-4500px);
+	transform:translate(0px,-4500px);
 
 }
 .bannar-come {
@@ -1103,7 +1103,7 @@ audio {
 	background-image: url('pose2.png');
 }
 #b3,#b33 {
-	background-image: url('b3.png');
+	background-image: url('us.png');
 }
 #b4,#b44{
 	background-image: url('b4.png');
@@ -1116,6 +1116,9 @@ audio {
 }
 #b7,#b77{
 	background-image: url('b7.png');
+}
+#jam{
+	background-image: url('dance.png');
 }
 .balloons-rotate-behaviour-one {
 	-webkit-animation: balloons_rotate_one linear 10s infinite;
