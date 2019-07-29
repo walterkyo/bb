@@ -1,5 +1,5 @@
 function showDecor() {
-	var app = new PIXI.Application(window.innerWidth, window.innerHeight, { antialias: true, backgroundColor: 0xffdab9 });
+	var app = new PIXI.Application(window.innerWidth, window.innerHeight, { antialias: true, backgroundColor: 0xF0F6F7 });
 $('.decorbg').prepend(app.view);
 
 var sprites = new PIXI.particles.ParticleContainer(10000, {
@@ -20,7 +20,6 @@ for (var i = 0; i < totalSprites; i++) {
 
     // create a new Sprite
     var dude = PIXI.Sprite.fromImage('img/confetti.png');
-
     dude.tint = Math.random() * 0xE8D4CD;
 
     // set the anchor point so the texture is centerd on the sprite
@@ -39,7 +38,7 @@ for (var i = 0; i < totalSprites; i++) {
     dude.direction = Math.random()/10 * Math.PI * 4.71239;
 
     // this number will be used to modify the direction of the sprite over time
-    dude.turningSpeed = 0;//Math.random() - 0.8;
+    dude.turningSpeed = 0; //Math.random() - 0.8;
 
     // create a random speed between 0 - 2, and these confetti are slooww
     dude.speed = (2 + Math.random() * 2) * 1;
@@ -128,37 +127,39 @@ $('document').ready(function(){
 		});
 
 	$('#turn_on').click(function(){
-		// $('#bulb_yellow').addClass('bulb-glow-yellow');
-		// $('#bulb_red').addClass('bulb-glow-red');
-		// $('#bulb_blue').addClass('bulb-glow-blue');
-		// $('#bulb_green').addClass('bulb-glow-green');
-		// $('#bulb_pink').addClass('bulb-glow-pink');
-		// $('#bulb_orange').addClass('bulb-glow-orange');
+		$('#bulb_yellow').addClass('bulb-glow-yellow');
+		$('#bulb_red').addClass('bulb-glow-red');
+		$('#bulb_blue').addClass('bulb-glow-blue');
+		$('#bulb_green').addClass('bulb-glow-green');
+		$('#bulb_pink').addClass('bulb-glow-pink');
+		$('#bulb_orange').addClass('bulb-glow-orange');
 		$('body').addClass('peach');
 		showDecor();
-		$(this).fadeOut('slow').delay(2000).promise().done(function(){
+		$(this).fadeOut('slow').delay(0).promise().done(function(){
 			$('#play').fadeIn('slow');
 		});
 	});
 	$('#play').click(function(){
 		var audio = $('.song')[0];
         audio.play();
-  //       $('#bulb_yellow').addClass('bulb-glow-yellow-after');
-		// $('#bulb_red').addClass('bulb-glow-red-after');
-		// $('#bulb_blue').addClass('bulb-glow-blue-after');
-		// $('#bulb_green').addClass('bulb-glow-green-after');
-		// $('#bulb_pink').addClass('bulb-glow-pink-after');
-		// $('#bulb_orange').addClass('bulb-glow-orange-after');
+        $('#bulb_yellow').addClass('bulb-glow-yellow-after');
+		$('#bulb_red').addClass('bulb-glow-red-after');
+		$('#bulb_blue').addClass('bulb-glow-blue-after');
+		$('#bulb_green').addClass('bulb-glow-green-after');
+		$('#bulb_pink').addClass('bulb-glow-pink-after');
+		$('#bulb_orange').addClass('bulb-glow-orange-after');
 		$('body').css('backgroud-color','#FFF');
 		$('body').addClass('peach-after');
-		$(this).fadeOut('slow').delay(6000).promise().done(function(){
+
+		//play jam photos
+		$(this).fadeOut('slow').delay(0).promise().done(function(){
 			$('#bannar_coming').fadeIn('slow');
 		});
 	});
 
 	$('#bannar_coming').click(function(){
 		$('.bannar').addClass('bannar-come');
-		$(this).fadeOut('slow').delay(6000).promise().done(function(){
+		$(this).fadeOut('slow').delay(0).promise().done(function(){
 			$('#balloons_flying').fadeIn('slow');
 		});
 	});
@@ -215,7 +216,7 @@ $('document').ready(function(){
 	}
 
 	$('#balloons_flying').click(function(){
-		$('.balloon-border').animate({top:-500},8000);
+		$('.balloon-border').animate({top:0},1500);	//-500
 		$('#b1,#b4,#b5,#b7').addClass('balloons-rotate-behaviour-one');
 		$('#b2,#b3,#b6').addClass('balloons-rotate-behaviour-two');
 		// $('#b3').addClass('balloons-rotate-behaviour-two');
@@ -231,23 +232,45 @@ $('document').ready(function(){
 		loopSix();
 		loopSeven();
 		
-		$(this).fadeOut('slow').delay(5000).promise().done(function(){
+		$(this).fadeOut('slow').delay(0).promise().done(function(){
 			$('#cake_fadein').fadeIn('slow');
 		});
 	});	
 
 	$('#cake_fadein').click(function(){
 		$('.cake').fadeIn('slow');
-		$(this).fadeOut('slow').delay(3000).promise().done(function(){
+		$(this).fadeOut('slow').delay(0).promise().done(function(){
 			$('#light_candle').fadeIn('slow');
 		});
 	});
 
 	$('#light_candle').click(function(){
-		$('.fuego').fadeIn('slow');
 		$(this).fadeOut('slow').promise().done(function(){
-			$('#wish_message').fadeIn('slow');
+			$('#lighter_img').attr('src', 'firelighter.png').load(function(){
+    			this.width;
+
+    			$('#light_candle').fadeIn('slow').delay(2000).promise().done(function(){
+    				$('.fuego').fadeIn('slow');
+    				$('#light_candle').fadeOut('slow').promise().done(function(){
+						$('#wish_message').fadeIn('slow');
+					});
+				});
+			});
 		});
+
+
+		// $('#lighter_img').attr('src', 'firelighter.png').load(function(){
+  //   		this.width;   // Note: $(this).width() will not work for in memory images
+  //   		$('.fuego').fadeIn('slow');
+		// $(this).fadeOut('slow').promise().done(function(){
+		// 	$('#wish_message').fadeIn('slow');
+		// });
+		// });
+
+		// $('.fuego').fadeIn('slow');
+		// $(this).fadeOut('slow').promise().done(function(){
+		// 	$('#wish_message').fadeIn('slow');
+		// });
 	});
 
 		
@@ -270,7 +293,7 @@ $('document').ready(function(){
 		$('#b66').animate({top:240, left: vw+150},500);
 		$('#b77').animate({top:240, left: vw+250},500);
 		$('.balloons').css('opacity','0.9');
-		$('.balloons h2').fadeIn(3000);
+		// $('.balloons h2').fadeIn(3000);
 		$(this).fadeOut('slow').delay(3000).promise().done(function(){
 			$('#story').fadeIn('slow');
 		});

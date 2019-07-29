@@ -7,9 +7,9 @@
 <head>
 	<title>Happy Birthday</title>
 	<meta charset="UTF-8" />
-	<meta name="description" content="Happy Birthday">
+	<meta name="description" content="Happy Birthday 2019">
 	<meta name="robots" content="index, follow" />
-	<link rel="author" href="https://plus.google.com/u/1/+AyushSharma1/" /> 
+	<link rel="author" href="https://plus.google.com/u/1/+WalterLam/" /> 
     <meta name="keywords" content="Birthday, Happy">
     <!-- Strat of Facebook Meta -->
     <meta property="og:type" content="E-Greeting" />
@@ -32,10 +32,14 @@
 <body>
 	<div class="decorbg" style="z-index: 0; position: absolute; top: 0px; left: 0px; "></div>
 	<div class="loading"></div>
-	<audio class="song" controls loop>
+	<audio class="song" controls loop id="audio">
         <source src="hbd.mp3"></source>
 	   Your browser isn't invited for super fun audio time.
     </audio>
+    <script>
+    var audio = document.getElementById("audio");
+    audio.volume = 0.0;
+  </script>
     <div class="balloons text-center" id="b1">
     	<h2 style="color:#F2B300;">x</h2>
     </div>
@@ -85,7 +89,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-12 text-center">
-				<img src="banner.png" class="bannar">
+				<img src="myBanner.jpg" class="bannar">
 			</div>
 		</div>
 		<!-- <div class="row message">
@@ -108,68 +112,37 @@
 		</div>
 		<div class="row message">
 			<div class="col-md-12">
-				<p>Today is...</p>
-				<p>as beautiful as other days</p>
-				<p>but you realize</p>
-				<p>another year has gone</p>
-				<p>in a blink of the eyes</p>
-				<p><strong>however</strong></p>
-				<p>Do you know..?</p>
-				<p>today is just special</p>
-				<p>so special to you</p>
-				<p>that's why</p>
-				<p>Let's make it...</p>
-				<p>the best celebration ever</p>
-				<p>and let me share...</p>
-				<p>a piece of happiness to you</p>
-				<p>I made all this...</p>
-				<p>as a birthday present to you</p>
-				<p>thanks for being there</p>
-				<p>thanks for the friendship we made</p>
-				<p>thanks for everything</p>
-				<p>I wish you all the best</p>
-				<p>May your life be at ease</p>
-				<p>May all your wishes come true</p>
-				<p>Remember</p>
-				<p>your ambitions</p>
-				<p>you live as a free bird...</p>
-				<p>flying in the blue sky</p>
-				<p>Now things are different...</p>
-				<p>real story of your life</p>
-				<p>is just about to begin</p>
-				<p>indeed..</p>
-				<p>this life is not easy as we thought</p>
-				<p>but...</p>
-				<p>don't worry</p>
-				<p>don't be afraid</p>
-				<p>because...</p>
-				<p>you are not alone in this world</p>
-				<p>because...</p>
-				<p>this year will be better</p>
-				<p>and I hope</p>
-				<p>you'll find...</p>
-				<p>happiness along the way</p>
-				<p>keep your spirits up</p>
-				<p>enjoy every single moment...</p>
-				<p>that you experiecne today</p>
-				<p>fill it with your most beautiful smile</p>
-				<p>and make it the best memory..</p>
-				<p>lastly...</p>
-				<p>I'd like to wish you one more time</p>
-				<p>a very happy birthday</p>
+				<p>老婆生日快樂🎂 I love you 3000!</p>
+				<p>你叫我不用準備什麼 我卻不想隨便就算</p>
+				<p>剛開始在想買什麼禮物 不需數秒就回收了這念頭</p>
+				<p>夫婦間需要浪漫才能繼續把愛火傳承下去</p>
+				<p>哪怕只是一點點 我也想為愛情付出 製造浪漫給你</p>
+				<p>這段訊息是希望有情書的感覺 行行字句 似對白又似歌詞</p>
+				<p>婚後我與你的羈絆就更深了 跟Jam相處更加令我們的家洋溢著溫暖</p>
+				<p>真正的家不在於地方</p>
+				<p>只要有我的家人在 我的家就在那裡 你是我最重要的家人</p>
+				<p>過去一年與你一起經歷了更多的大事小事 也是令我倆成長的過程</p>
+				<p>成長的同時也負擔起更多的責任 照顧更多的日常事務</p>
+				<p>Life still going on</p>
+				<p>生活只能Keep going</p>
+				<p>亦可以Take a break 累了就躺一躺 沒差那點時間</p>
+				<p>這刻問我人生意義 就是能跟你創造更多更多更多更多回憶 到老了病了也能帶著笑容</p>
+				<p>Whatever happened to us, We can figure it out together</p>
+				<p>I am Happy on your birth day, so do your Father</p>
+				<p>讓他看到我們更多的笑容</p>
 			</div>
 		</div>
 		<div class="navbar navbar-fixed-bottom">
 			<div class="row">
 				<div class="col-md-6 text-center col-md-offset-3">
-					<button class="btn btn-primary" id="turn_on" style="background-color: black;border-color:black;"><img src="switch.png" style="width:60px;height:60px;"></button>
-					<button class="btn btn-primary" id="play">Play Music</button>
-					<button class="btn btn-primary" id="bannar_coming">Let's Decorate</button>
-					<button class="btn btn-primary" id="balloons_flying">Fly With Balloons</button>
-					<button class="btn btn-primary" id="cake_fadein">Most Delicious Cake Ever</button>
-					<button class="btn btn-primary" id="light_candle" style="background-color: black;border-color:black;"><img src="lighter.png" style="width:60px;height:60px;"></button>
-					<button class="btn btn-primary" id="wish_message">Happy Birthday</button>
-					<button class="btn btn-primary" id="story">A mesage for you</button>
+					<button class="btn btn-primary" id="turn_on" style="background-color: transparent;border-color:transparent;"><img src="switch.png" style="width:60px;height:60px;"></button>
+					<button class="btn btn-primary" id="play" style="background-color: transparent;border-color:transparent;"><img src="music.png" style="width:60px;height:60px;"></button>
+					<button class="btn btn-primary" id="bannar_coming" style="background-color: transparent;border-color:transparent;"><img src="celebrate.png" style="width:60px;height:60px;"></button>
+					<button class="btn btn-primary" id="balloons_flying" style="background-color: transparent;border-color:transparent;"><img src="bdayballoon.png" style="width:60px;height:60px;"></button>
+					<button class="btn btn-primary" id="cake_fadein" style="background-color: transparent;border-color:transparent;"><img src="bdaycake.png" style="width:60px;height:60px;"></button>
+					<button class="btn btn-primary" id="light_candle" style="background-color: transparent;border-color:transparent;"><img id="lighter_img" src="lighter.png" style="width:60px;height:60px;"></button>
+					<button class="btn btn-primary" id="wish_message">Happy Birthday 老婆</button>
+					<button class="btn btn-primary" id="story">A message for you</button>
 					<!-- <button class="btn btn-primary" id="cake_cut">Lrt's Cut the Cake</button> -->
 				</div>
 			</div>
